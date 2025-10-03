@@ -1,0 +1,28 @@
+---
+title: "hex"
+author: "Dionne Argyropoulos"
+format: html
+---
+
+```{r}
+# Load the package
+library(hexSticker)
+
+# Generate hex sticker
+sticker(
+  subplot = "wastewateR_image.png",        # your image
+  package = "wastewateR",        # your package name
+  p_size = 30,                   # font size for the package name
+  p_color = "#134f61",           # dark grey text
+  p_family = "Aller",            # nice readable font (optional)
+  s_x = 1,                       # x position of the image
+  s_y = 0.8,                     # y position
+  s_width = 0.6,                 # scale image size
+  s_height = 0.6,
+  h_fill = "#8FBABD",            # hex background color
+  h_color = "#134f61",           # border color (purple tone)
+  dpi = 600,
+  filename = "wastewateR_sticker.png"  # output file
+)
+
+```
