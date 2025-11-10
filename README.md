@@ -1,4 +1,4 @@
-# <img src="hex/wastewateR_sticker.png" width="25%" height="25%" align="left"/> wastewateR
+# <img src="inst/hex/wastewateR_sticker.png" width="25%" height="25%" align="left"/> wastewateR
 
 The `{wastewateR}` R package contains helper functions relevant for wastewater qPCR projects for in-house and collaborator needs. 
 
