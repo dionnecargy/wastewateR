@@ -9,11 +9,12 @@
 #' @import dplyr
 #' @import tidyr
 #' @import ggplot2
+#' @importFrom stats lm na.omit sd
 #'
 #' @author Dionne Argyropoulos
-plotStd <- function(df){
+plotStd <- function(stats_df){
   # Step 1: Calculate formulas, slope, R², and PCR efficiency
-  results_table <- df %>%
+  results_table <- stats_df %>%
     tidyr::drop_na() %>%
     dplyr::group_by(Sample) %>%
     dplyr::do({
@@ -41,10 +42,10 @@ plotStd <- function(df){
     dplyr::ungroup()
 
   # Step 2: Plot Standard Curve with Trendline
-  stdcurveplot <- df %>%
+  stdcurveplot <- stats_df %>%
     ggplot2::ggplot(aes(LogCopy, mean, colour = Sample)) +
     ggplot2::geom_point() +
-    ggplot2::scale_colour_manual(values = melbourne::melb_trams(length(unique(df$Sample)))) +
+    # ggplot2::scale_colour_manual(values = melbourne::melb_trams(length(unique(stats_df$Sample)))) +
     ggplot2::geom_smooth(aes(group = Sample), method = "lm", se = TRUE) +
     ggplot2::facet_wrap(~Sample) +
     ggplot2::theme_bw() +

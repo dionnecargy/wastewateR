@@ -12,6 +12,7 @@
 #'
 #' @import dplyr
 #' @import tidyr
+#' @importFrom utils read.csv
 #'
 #' @author Dionne Argyropoulos
 readqPCR <- function(raw_data, MPlex = "No", Samples){

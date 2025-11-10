@@ -4,7 +4,7 @@
 \alias{plotStd}
 \title{Plot the standard curve}
 \usage{
-plotStd(df)
+plotStd(stats_df)
 }
 \arguments{
 \item{stats_df}{Output from `summariseqPCR()`}

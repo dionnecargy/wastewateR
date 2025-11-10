@@ -4,7 +4,7 @@
 \alias{checkDilutions}
 \title{Check whether Dilutions are 1:10 Cq}
 \usage{
-checkDilutions(df)
+checkDilutions(stats_df)
 }
 \arguments{
 \item{stats_df}{Output from `summariseqPCR()`}

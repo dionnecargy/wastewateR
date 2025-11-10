@@ -8,8 +8,8 @@
 #' @import dplyr
 #'
 #' @author Dionne Argyropoulos
-checkDilutions <- function(df) {
-  df %>%
+checkDilutions <- function(stats_df) {
+  stats_df %>%
     dplyr::group_by(Fluor, Target, Sample) %>%
     dplyr::arrange(desc(LogCopy), .by_group = TRUE) %>%
     dplyr::mutate(
