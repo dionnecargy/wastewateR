@@ -4,14 +4,17 @@
 \alias{readqPCR}
 \title{Read raw qPCR Data}
 \usage{
-readqPCR(raw_data, MPlex = "No", Samples)
+readqPCR(raw_data, MPlex = "No", Samples, Target = NULL)
 }
 \arguments{
 \item{raw_data}{One file path (.csv)}
 
-\item{MPlex}{Does your data contain multiplex data? "Yes" or "No". Default = "No.}
+\item{MPlex}{Does your data contain multiplex data? Yes or No. Default: No.}
 
-\item{Samples}{Does your data contain samples or just controls? "Yes" or "No".}
+\item{Samples}{Does your data contain samples or just controls? Yes or No.}
+
+\item{Target}{Does the "Target" column have data in it? Either supply another
+df with the Sample and Target or leave blank. Default is NULL.}
 }
 \value{
 A list of data frames containing (i) raw data (untouched),
