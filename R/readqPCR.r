@@ -106,11 +106,13 @@ readqPCR <- function(raw_data, MPlex = "No", Samples, Target = NULL){
           # find the "alternate" Biological Set Name (non-MPlex) for the same Fluor/Target
           alt_name = Sample[Sample != "MPlex"][1],
           # if row is MPlex, append alt_name; else leave unchanged
-          Sample = ifelse(Sample == "MPlex", paste0(alt_name, "_MPlex"), Sample)
+          Sample = ifelse(str_detect(Sample, "MPlex"), paste0(alt_name, "_MPlex"), Sample),
+          # Create new column for MPlex vs. SPlex
+          Plex = ifelse(str_detect(Sample, "MPlex"), "MPlex", "SPlex")
         ) %>%
         dplyr::select(-alt_name )
     } else {
-      results <- results
+      results <- results %>% mutate(Plex = "SPlex")
     }
 
     #############################################################################
