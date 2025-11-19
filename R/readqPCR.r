@@ -68,7 +68,7 @@ readqPCR <- function(raw_data, MPlex = "No", Samples, Target = NULL){
     if (target_col == TRUE){
       results <- results %>%
         dplyr::select(-Target) %>%
-        dplyr::left_join(target, by = "Sample")
+        dplyr::left_join(Target, by = "Sample")
     } else {
       results <- results
     }
