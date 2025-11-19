@@ -142,7 +142,7 @@ readqPCR <- function(raw_data, MPlex = "No", Samples, Target = NULL){
           Sample = ifelse(Sample == "Control", paste0("STD_", SQ), Sample),
           LogCopy = log10(as.numeric(SQ))
         ) %>%
-        dplyr::select(Well, Fluor, Sample, Cq, SQ, LogCopy, Target)
+        dplyr::select(Well, Fluor, Sample, Cq, SQ, LogCopy, Target, Plex)
 
     } else {
       # Remove Sample column
@@ -152,7 +152,7 @@ readqPCR <- function(raw_data, MPlex = "No", Samples, Target = NULL){
           Sample = paste0("STD_", SQ),
           LogCopy = log10(as.numeric(SQ))
         ) %>%
-        dplyr::select(Well, Fluor, Sample, Cq, SQ, LogCopy, Target) %>%
+        dplyr::select(Well, Fluor, Sample, Cq, SQ, LogCopy, Target, Plex) %>%
         dplyr::select(-Sample)
 
       ntcs <- ntcs %>% dplyr::select(-Sample)
