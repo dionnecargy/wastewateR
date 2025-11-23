@@ -1,3 +1,14 @@
+#' Limit of Detection
+#'
+#' Calculate the limit of detection at a 95% threshold (discrete calculation).
+#'
+#' @param qPCR_results  Output from `readqPCR()`.
+#' @param Samples Does your data contain samples or just controls? Yes or No.
+#'
+#' @returns A plot of the limit of detection
+#' @export
+#'
+#' @author Dionne Argyropoulos
 getLoD <- function(qPCR_results, Samples = "n"){
 
   Samples <- tolower(trimws(Samples)) # Normalize input: lowercase, trim spaces
@@ -41,7 +52,7 @@ getLoD <- function(qPCR_results, Samples = "n"){
     )
 
   # plot LoD detection rates
-  detections %>%
+  LoD_plot <- detections %>%
     ggplot2::ggplot(aes(x = LogCopy, y = rate)) +
     ggplot2::geom_point() +
     ggplot2::geom_line() +
@@ -62,4 +73,6 @@ getLoD <- function(qPCR_results, Samples = "n"){
       title = "Limit of Detection per Target"
     ) +
     ggplot2::lims(x = c(min(detections$LogCopy), max(detections$LogCopy)), y = c(0, 1))
+
+  return(LoD_plot)
 }
