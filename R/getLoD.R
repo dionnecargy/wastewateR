@@ -7,7 +7,7 @@
 #' @param Samples Does your data contain samples or just controls? Yes or No.
 #' @param lod_threshold Limit of detection threshold. Default = 0.95 (95%).
 #'
-#' @returns A plot of the limit of detection
+#' @returns A table and a plot the LoD results.
 #' @export
 #'
 #' @author Dionne Argyropoulos

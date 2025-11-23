@@ -16,7 +16,7 @@ getLoD(qPCR_results, MPlex = "n", Samples = "n", lod_threshold = 0.95)
 \item{lod_threshold}{Limit of detection threshold. Default = 0.95 (95%).}
 }
 \value{
-A plot of the limit of detection
+A table and a plot the LoD results.
 }
 \description{
 Calculate the limit of detection at a threshold (discrete calculation).
