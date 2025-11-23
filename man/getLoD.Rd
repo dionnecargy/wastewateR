@@ -4,18 +4,22 @@
 \alias{getLoD}
 \title{Limit of Detection}
 \usage{
-getLoD(qPCR_results, Samples = "n")
+getLoD(qPCR_results, MPlex = "n", Samples = "n", lod_threshold = 0.95)
 }
 \arguments{
 \item{qPCR_results}{Output from `readqPCR()`.}
 
+\item{MPlex}{Does your data contain multiplex data? Yes or No. Default: No.}
+
 \item{Samples}{Does your data contain samples or just controls? Yes or No.}
+
+\item{lod_threshold}{Limit of detection threshold. Default = 0.95 (95%).}
 }
 \value{
 A plot of the limit of detection
 }
 \description{
-Calculate the limit of detection at a 95% threshold (discrete calculation).
+Calculate the limit of detection at a threshold (discrete calculation).
 }
 \author{
 Dionne Argyropoulos
