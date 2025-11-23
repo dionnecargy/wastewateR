@@ -4,10 +4,14 @@
 \alias{plotStd}
 \title{Plot the standard curve}
 \usage{
-plotStd(stats_df)
+plotStd(qPCR_results, MPlex = "n", Samples = "n")
 }
 \arguments{
-\item{stats_df}{Output from `summariseqPCR()`}
+\item{qPCR_results}{Output from `readqPCR()`.}
+
+\item{MPlex}{Does your data contain multiplex data? Yes or No. Default: No.}
+
+\item{Samples}{Does your data contain samples or just controls? Yes or No.}
 }
 \value{
 A table of the linear model formula, slope, R², and PCR efficiency,
