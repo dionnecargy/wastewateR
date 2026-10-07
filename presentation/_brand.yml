@@ -1,0 +1,30 @@
+color:
+  palette:
+    dark-grey: "#222222"
+    blue: "#ddeaf1"
+  background: blue
+  foreground: dark-grey
+  primary: black
+
+# color:
+#   background:
+#     light: "#ffffff"
+#     dark: "#333333"
+#   foreground:
+#     light: "#333333"
+#     dark: "#ffffff"
+# typography:
+#   headings:
+#     color:
+#       light: "#111144"
+#       dark: "#d0d0ff"
+#       
+logo: 
+  medium: images/wastewater_sticker.png
+
+# typography:
+#   fonts:
+#     - family: Jura
+#       source: google
+#   base: Jura
+#   headings: Jura
