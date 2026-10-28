@@ -7,10 +7,11 @@ format: html
 ```{r}
 # Load the package
 library(hexSticker)
+library(here)
 
 # Generate hex sticker
 sticker(
-  subplot = "wastewateR_image.png",        # your image
+  subplot = here("inst/hex/wastewateR_image.png"),        # your image
   package = "wastewateR",        # your package name
   p_size = 30,                   # font size for the package name
   p_color = "#134f61",           # dark grey text
@@ -23,6 +24,6 @@ sticker(
   h_fill = "#8FBABD",            # hex background color
   h_color = "#134f61",           # border color (purple tone)
   dpi = 600,
-  filename = "wastewateR_sticker.png"  # output file
+  filename = here("inst/hex/wastewateR_sticker.png")  # output file
 )
 ```

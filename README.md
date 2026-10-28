@@ -4,12 +4,15 @@ The `{wastewateR}` R package contains helper functions relevant for wastewater q
 
 <p>&nbsp;</p>
 
-
-
-
 ## How to install the package:
 
 ```{r}
-devtools::install_github("dionnecargy/wastewateR") # To download the package
-library(wastewateR) # To load the package 
+# To download the package
+pak::pak("dionnecargy/wastewateR")
+
+# Or
+devtools::install_github("dionnecargy/wastewateR") 
+
+# To load the package 
+library(wastewateR) 
 ```
